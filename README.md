@@ -49,7 +49,15 @@ Luego de ejecutar el comando veremos que se ha imprimido por consola y sin error
 
 
 # Estructura de carpetas para un proyecto Node.js
-    /dist
-    /src
-        /models
+    ├── README.md
+    ├── dist
+    ├── public
+    ├── src
+    │   └── controllers
+    │   └── database
+    │   └── models
+    │   └── routes
+    ├── app.ts
+    ├── package.json
+    ├── tsconfig.json
 
