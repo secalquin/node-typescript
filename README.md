@@ -61,3 +61,10 @@ Luego de ejecutar el comando veremos que se ha imprimido por consola y sin error
     ├── package.json
     ├── tsconfig.json
 
+# Librerias utilizadas
+    - express
+    - typescript
+    - tslint
+    - sequalize
+    - dotenv
+
