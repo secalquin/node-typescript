@@ -65,7 +65,7 @@ var Server = /** @class */ (function () {
                         return [4 /*yield*/, connection_1.default.authenticate()];
                     case 1:
                         _a.sent();
-                        console.log('Database conectada correctamente');
+                        console.log("Database conectada correctamente");
                         return [3 /*break*/, 3];
                     case 2:
                         error_1 = _a.sent();

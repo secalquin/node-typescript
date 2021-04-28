@@ -1,5 +1,25 @@
 import { Request, Response } from "express";
+import { validationResult } from "express-validator";
 import Usuario from "../models/usuario";
+
+export const loginUsuario = async (req: Request, resp: Response) => {
+  try {
+    validationResult(req).throw();
+
+    const { email, password } = req.body;
+    const user = await Usuario.findOne({
+      where: { correo: email, contrasena: password },
+    });
+
+    if (!user) {
+      resp.status(404).json({ msg: "User not found" });
+    }
+
+    //GENERAR TOKEN.
+  } catch (err) {
+    resp.status(400).json(err);
+  }
+};
 
 export const getUsuarios = async (req: Request, resp: Response) => {
   const usuarios = await Usuario.findAll();

@@ -39,8 +39,35 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteUsuario = exports.putUsuario = exports.postUsuario = exports.getUsuario = exports.getUsuarios = void 0;
+exports.deleteUsuario = exports.putUsuario = exports.postUsuario = exports.getUsuario = exports.getUsuarios = exports.loginUsuario = void 0;
+var express_validator_1 = require("express-validator");
 var usuario_1 = __importDefault(require("../models/usuario"));
+var loginUsuario = function (req, resp) { return __awaiter(void 0, void 0, void 0, function () {
+    var _a, email, password, user, err_1;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
+            case 0:
+                _b.trys.push([0, 2, , 3]);
+                express_validator_1.validationResult(req).throw();
+                _a = req.body, email = _a.email, password = _a.password;
+                return [4 /*yield*/, usuario_1.default.findOne({
+                        where: { correo: email, contrasena: password },
+                    })];
+            case 1:
+                user = _b.sent();
+                if (!user) {
+                    resp.status(404).json({ msg: "User not found" });
+                }
+                return [3 /*break*/, 3];
+            case 2:
+                err_1 = _b.sent();
+                resp.status(400).json(err_1);
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
+        }
+    });
+}); };
+exports.loginUsuario = loginUsuario;
 var getUsuarios = function (req, resp) { return __awaiter(void 0, void 0, void 0, function () {
     var usuarios;
     return __generator(this, function (_a) {

@@ -1,0 +1,1 @@
+{"version":3,"file":"UserRequest.js","sourceRoot":"","sources":["../../../src/middlewares/UserRequest.ts"],"names":[],"mappings":";;;AAAA,uDAAmE;AAEtD,QAAA,UAAU,GAAG,yBAAK,CAAC;IAC9B,yBAAK,CAAC,OAAO,CAAC,CAAC,MAAM,EAAE,CAAC,WAAW,CAAC,mBAAmB,CAAC;IACxD,yBAAK,CAAC,UAAU,CAAC,CAAC,MAAM,EAAE,CAAC,WAAW,CAAC,sBAAsB,CAAC;CAC/D,CAAC,CAAC"}
