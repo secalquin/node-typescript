@@ -67,4 +67,5 @@ Luego de ejecutar el comando veremos que se ha imprimido por consola y sin error
     - tslint
     - sequalize
     - dotenv
+    - express-validator
 
