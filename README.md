@@ -4,11 +4,11 @@
 
 1. Nos dirigimos a la raiz del proyecto o carpeta donde inicializaremos nuestro proyecto.
 
-2. Instalaremos la dependencia typescript
-    - npm install -g typescript : (No es necesario instalar global, yo no lo tenia en ese momento, puedes instalarlo en el proyecto.)
-
-3. Inicializamos nuestro proyecto de node.
+2. Inicializamos nuestro proyecto de node.
     - npm init -y
+
+3. Instalaremos la dependencia typescript
+    - npm install -g typescript : (No es necesario instalar global, yo no lo tenia en ese momento, puedes instalarlo en el proyecto.)
 
 4. Crearemos el archivo de configuracion de typescript, para que compile o interprete nuestro archivo.
     - tsc --init
